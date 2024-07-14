@@ -27,6 +27,7 @@ nav{
 .btn{
     background-color: #FD6E0A;
     font-weight: bold;
+    font-size: 20px;
     color: aliceblue;
     padding: 18px 35px;
     border-radius:5px;
@@ -39,6 +40,20 @@ nav{
     font-size: 45px;
 }
 
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav li a{
+    text-decoration: none;
+    font-size: 20px;
+}
 
 
 /* shared-style */
@@ -68,20 +83,9 @@ nav{
 
 }
 
-nav ul{
-    display: flex;
-    align-items: center;
-}
 
-nav ul li{
-    list-style: none;
-    margin-right: 50px;
-}
 
-nav li a{
-    text-decoration: none;
-    font-size: 20px;
-}
+
 
 /* banner-styles */
 
@@ -126,9 +130,7 @@ nav li a{
     padding: 130px 150px;
     text-align: center;
     
-    height: 288px;
-    width: 827px;
-   
+    
 }
 
 .item-description{
@@ -170,6 +172,10 @@ margin-bottom: 130px;
     display: flex;
     gap: 24px;
 }
+
+.resume hr{
+    margin: 30px 5px;
+}
 .experirnce-sub-title{
     font-size: 20px;
     font-weight: 600;
@@ -200,12 +206,12 @@ footer{
     width: 50%;
 }
 
-form{
+/* form{
     display:flex;
     flex-direction: column;
     gap: 20px;
 
-}
+} */
 
 footer input[type="text"],footer input[type="email"], footer textarea{
     height: 64px;
@@ -216,4 +222,44 @@ footer input[type="text"],footer input[type="email"], footer textarea{
     background-color: aliceblue;
     margin-bottom: 24px;
     border: none;
+}
+
+/* responsive media query */
+@media screen and (max-width:576px){
+    .skill-container{
+       flex-direction: column;
+    
+    }
+
+    .about-items{
+        flex-direction: column;
+        padding: auto;
+        
+    }
+
+    .banner{
+        flex-direction: column;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .resume-container{
+        flex-direction: column;
+    }
+    footer, .about{
+        padding: 20px;
+    }
+
+    .about{
+        margin: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+
+    footer input[type="text"],footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
 }
