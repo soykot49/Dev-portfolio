@@ -224,8 +224,29 @@ footer input[type="text"],footer input[type="email"], footer textarea{
     border: none;
 }
 
+
+
 /* responsive media query */
 @media screen and (max-width:576px){
+
+    .head{
+        background-image: none;
+    }
+
+    .banner-profile{
+        width: 100%;
+    }
+
+    nav, nav > ul{
+        flex-direction: column;
+    }
+
+    nav > ul{
+        gap: 20px;
+    }
+    .btn{
+        margin-top: 20px;
+    }
     .skill-container{
        flex-direction: column;
     
@@ -239,6 +260,7 @@ footer input[type="text"],footer input[type="email"], footer textarea{
 
     .banner{
         flex-direction: column;
+        margin: 20px;
     }
 
     footer{
